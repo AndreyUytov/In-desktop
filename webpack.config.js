@@ -4,7 +4,7 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
-const  cssnano  =  require ( "cssnano" );
+const cssnano  =  require ( "cssnano" );
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin= require('copy-webpack-plugin');
 
@@ -117,9 +117,21 @@ module.exports = env => {
             {
               loader: "file-loader",
               options: {
-                name: "[name].[ext]",
-                publicPath: (url, resourcePath, context) => {
-                  return `${context}/dist`
+                name: () => {
+                  if (isProduction) {
+                    return '[contenthash].[ext]'
+                  } else return '[name].[ext]'
+                },
+                outputPath: (url, resourcePath, context) => {
+                  if(/svg/.test(resourcePath)) {
+                    return `img/svg/${url}`
+                  }
+                  if (/images/.test(resourcePath)) {
+                    return `img/${url}`
+                  }
+                  if (/fonts/.test(resourcePath)) {
+                    return `fonts/${url}`
+                  }
                 }
               }
             }
