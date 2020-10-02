@@ -146,29 +146,15 @@ module.exports = env => {
               loader: "html-loader",
               options: {
                 attributes: {
-                  list: [
-                    '...',
-                    {
-                      tag: 'link',
-                      attribute: 'rel',
-                      type: 'src',
-                      filter: (tag, attribute) => {
-                        if (/stylesheet/.test(attribute)) {
-                          console.log(tag, attribute)
-                          return false
-                        }
-                      }
-                    },
-                    {
-                      tag: 'script',
-                      attribute: 'src',
-                      type: 'src',
-                      filter: (tag, attribute) => {
-                        console.log(tag, attribute)
-                        return false
-                      }
+                  urlFilter: (attribute, value) => {
+                    if (/href/.test(attribute) && /.css/.test(value)) {
+                      return false
                     }
-                  ]
+                    if (/src/.test(attribute) && /.js/.test(value)) {
+                      return false
+                    }
+                    return true
+                  }
                 }
               }
             }
