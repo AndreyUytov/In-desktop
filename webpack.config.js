@@ -86,7 +86,7 @@ module.exports = env => {
             {
               loader: "postcss-loader",
               options: {
-                ident: "postcss",
+               postcssOptions: {
                 plugins: [
                   (() => {
                     if (isProduction) {
@@ -94,6 +94,7 @@ module.exports = env => {
                     } else return autoprefixer();
                   })()
                 ],
+               },
                 sourceMap: true
               }
             },
@@ -142,7 +143,34 @@ module.exports = env => {
           include: path.resolve(__dirname, 'src/pages/includes'),
           use: [
             {
-              loader: "html-loader"
+              loader: "html-loader",
+              options: {
+                attributes: {
+                  list: [
+                    '...',
+                    {
+                      tag: 'link',
+                      attribute: 'rel',
+                      type: 'src',
+                      filter: (tag, attribute) => {
+                        if (/stylesheet/.test(attribute)) {
+                          console.log(tag, attribute)
+                          return false
+                        }
+                      }
+                    },
+                    {
+                      tag: 'script',
+                      attribute: 'src',
+                      type: 'src',
+                      filter: (tag, attribute) => {
+                        console.log(tag, attribute)
+                        return false
+                      }
+                    }
+                  ]
+                }
+              }
             }
           ]
         }
