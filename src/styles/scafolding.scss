@@ -66,6 +66,6 @@ input[type="radio"].visually-hidden {
 	align-items: center;
 }
 
-.nav-link__svg use path{
-	stroke: #0275B1;
+.nav-item--active {
+	--svg-icon-color:  var(--akcentFonColor);
 }

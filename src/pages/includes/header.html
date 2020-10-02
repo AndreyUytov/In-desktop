@@ -7,51 +7,28 @@
   <nav class="header__nav">
     <ul class="nav-list list">
 
-      <li class="nav-item">
-        <a class="nav-link" href="feed.html">
-          <svg class="nav-link__svg">
-            <use xlink:href="#feed" />
-          </svg>
-          FEED
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="network.html">
-          <svg class="nav-link__svg">
-            <use xlink:href="#network" />
-          </svg>
-          NETWORK
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="jobs.html">
-          <svg class="nav-link__svg">
-            <use xlink:href="#jobs" />
-          </svg>
-          JOBS
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="chat.html">
-          <svg class="nav-link__svg">
-            <use xlink:href="#chat" />
-          </svg>
-          CHAT
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="notices.html">
-          <svg class="nav-link__svg">
-            <use xlink:href="#notices" />
-          </svg>
-          NOTICES
-        </a>
-      </li>
+      <% menuItems.forEach(function(item) { %>
+        <li class="<%= item === activePage ? "nav-item nav-item--active" : "nav-item" %>">
+          <a class="nav-link" <%= item === activePage ? "" : `href=${item}.html` %> >
+            <svg class="nav-link__svg">
+              <use xlink:href="#<%=item%>" />
+            </svg>
+            <%=item.toUpperCase()%>
+          </a>
+        </li>
+      <% }) %>
 
     </ul>
+
+    <form class="header__search">
+      <label class="header__label">
+        <input class="header__input" type="text" placeholder="Search" />
+      </label>
+    </form>
+
+    <section class="header__profile">
+      <img src="./../../images/avatar.png" alt="avatar" srcset="./../../images/avatar2x.png 2x">
+      
+    </section>
   </nav>
 </header>

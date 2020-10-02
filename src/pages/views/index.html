@@ -1,13 +1,20 @@
 <% var data = {
-  pageTitle: 'Profile'
-}
-%>
+  pageTitle: 'Profile',
+  menuItems: [
+  'feed',
+  'network',
+  'jobs',
+  'chat',
+  'notices'
+  ],
+  activePage: 'feed'
+}%>
 
 <%= _.template(require('./../includes/doctype.html'))(data) %>
 
 <%= _.template(require('./../includes/svg-sprite.html'))() %>
 
-<%= _.template(require('./../includes/header.html'))() %>
+<%= _.template(require('./../includes/header.html'))(data) %>
 
 <main class="main">
 
