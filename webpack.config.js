@@ -66,13 +66,30 @@ module.exports = env => {
 
     module: {
       rules: [
-        { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
+        { 
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: [
+            {
+              loader: "babel-loader",
+              options: {
+                presets: [
+                  '@babel/preset-env'
+                ],
+                plugins: [
+                  '@babel/plugin-transform-runtime'
+                ]
+              }
+            }
+          ] 
+        },
         {
           test: /\.scss$/,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
+                hmr: !isProduction,
                 reloadAll: true,
                 sourceMap: true
               }
