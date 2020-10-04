@@ -17,7 +17,7 @@ function generateHtmlPlugins(templateDir) {
     return new HtmlWebpackPlugin({
       filename: `${name}.html`,
       template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`),
-      inject: false,
+      inject: true,
     })
   })
 }
@@ -30,28 +30,34 @@ module.exports = env => {
   return {
     mode: isProduction ? "production" : "development",
     entry: {
-      index: './src/index.js',
-      styles: './src/styles/index.scss'
+      index: './src/index.js'
     },
     output: {
       path: path.join(__dirname, "dist"),
-      publicPath: "/",
-      filename: "js/index.js",
+      publicPath: "./",
+      filename: isProduction ? "js/[name][hash].js" : "js/[name].js",
     },
 
-    devtool: isProduction ? "source-map" : "inline-source-map",
+    optimization: {
+      splitChunks: {
+        chunks: 'all'
+      }
+    },
+
+    devtool: isProduction ? "" : "source-map",
 
     devServer: {
       contentBase: path.join(__dirname, "dist"),
       watchContentBase: true,
       publicPath: '/',
-      openPage: 'index.html'
+      openPage: 'index.html',
+      // hot: !isProduction
     },
 
     plugins: [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: "css/index.css"
+        filename: isProduction ? "css/[hash].css" : "css/index.css"
       }),
       new CopyWebpackPlugin({
         patterns: [
@@ -77,7 +83,8 @@ module.exports = env => {
                   '@babel/preset-env'
                 ],
                 plugins: [
-                  '@babel/plugin-transform-runtime'
+                  '@babel/plugin-transform-runtime',
+                  '@babel/plugin-proposal-class-properties'
                 ]
               }
             }
@@ -91,13 +98,13 @@ module.exports = env => {
               options: {
                 hmr: !isProduction,
                 reloadAll: true,
-                sourceMap: true
+                sourceMap: !isProduction
               }
             },
             {
               loader: "css-loader",
               options: {
-                sourceMap: true
+                sourceMap: !isProduction
               }
             },
             {
@@ -112,19 +119,19 @@ module.exports = env => {
                   })()
                 ],
                },
-                sourceMap: true
+                sourceMap: !isProduction
               }
             },
             {
               loader: "resolve-url-loader",
               options: {
-                sourceMap: true
+                sourceMap: !isProduction
               }
             },
             {
               loader: "sass-loader",
               options: {
-                sourceMap: true
+                sourceMap: !isProduction
               }
             }
           ]
@@ -140,7 +147,7 @@ module.exports = env => {
                     return '[contenthash].[ext]'
                   } else return '[name].[ext]'
                 },
-                outputPath: (url, resourcePath, context) => {
+                outputPath: (url, resourcePath) => {
                   if(/svg/.test(resourcePath)) {
                     return `img/svg/${url}`
                   }
@@ -160,20 +167,7 @@ module.exports = env => {
           include: path.resolve(__dirname, 'src/pages/includes'),
           use: [
             {
-              loader: "html-loader",
-              options: {
-                attributes: {
-                  urlFilter: (attribute, value) => {
-                    if (/href/.test(attribute) && /.css/.test(value)) {
-                      return false
-                    }
-                    if (/src/.test(attribute) && /.js/.test(value)) {
-                      return false
-                    }
-                    return true
-                  }
-                }
-              }
+              loader: "html-loader"
             }
           ]
         }
