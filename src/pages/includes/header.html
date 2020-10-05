@@ -1,9 +1,13 @@
 <header class="header">
+
   <div class="header__logo">
-    <svg class="logo">
-      <use xlink:href="#white-logo"/>
-    </svg>
+    <a class="Header__logo-link">
+      <svg class="logo">
+        <use xlink:href="#white-logo"/>
+      </svg>
+    </a>
   </div>
+
   <nav class="header__nav">
     <ul class="nav-list list">
 
@@ -19,32 +23,44 @@
       <% }) %>
 
     </ul>
+  </nav>
 
-    <form class="header__search">
+  <section class="header__search-section">
+    <form class="header__search-form">
       <label class="header__label">
         <input class="header__input" type="text" placeholder="Search" />
       </label>
     </form>
+  </section>
 
-    <section class="header__profile">
-      <picture class="header__header__profile-img" >
-        <source srcset="./../../images/avatar2x.webp" type="image/webp">
-        <source srcset="./../../images/avatar2x.png 2x">
-        <img src="./../../images/avatar.png" alt="avatar">
-      </picture>
-      <div class="header__profile-wrapper">
-        <h3 class="header__profile-name">
-          D. KARGAEV <span class="header__profile-pointer">YOU</span>
-        </h3>
-        <p class="header__profile-views">367 views today
-          <span class="header__profile-last-views">
-            +32
-            <svg class="header__profile-views-arrow">
-              <use xlink:href='#green-arrow' />
-            </svg>
-          </span>
-        </p>
-      </div>
-    </section>
-  </nav>
+  <section class="header__profile">
+    <picture class="header__header__profile-img" >
+      <source srcset="./../../images/avatar2x.webp" type="image/webp">
+      <source srcset="./../../images/avatar2x.png 2x">
+      <img src="./../../images/avatar.png" alt="avatar">
+    </picture>
+    <div class="header__profile-wrapper">
+      <h3 class="header__profile-name">
+        D. KARGAEV <span class="header__profile-pointer">YOU</span>
+      </h3>
+      <p class="header__profile-views">367 views today
+        <span class="header__profile-last-views">
+          +32
+          <svg class="header__profile-views-arrow">
+            <use xlink:href='#green-arrow' />
+          </svg>
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <section class="header__other-section">
+    <button class="other-section__link">
+      <svg class="other-section__link-svg">
+        <use xlink:href="#more" />
+      </svg>
+      OTHER
+    </button>
+  </section>
+  
 </header>
