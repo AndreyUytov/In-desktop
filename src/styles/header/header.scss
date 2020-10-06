@@ -1,0 +1,32 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 450px 367px 330px auto;
+  grid-template-rows: 80px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-link {
+  width: 90px;
+  height: 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 11px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: --defaultTextColor;
+}
+
+.nav-link__svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 10px;
+}
