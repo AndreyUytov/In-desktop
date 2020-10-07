@@ -19,10 +19,10 @@ html {
 }
 
 body {
-	font-family: 'Lato Regular';
+	font-family: 'Gotham';
 	font-size: 18px;
 	line-height: 26px;
-	color: #333333;
+	color: var(--defaultTextColor);
 }
 
 .content-box-component {
@@ -61,11 +61,14 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
+	padding: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
 
-.nav-item--active {
-	--svg-icon-color:  var(--akcentFonColor);
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+	outline: none;
 }

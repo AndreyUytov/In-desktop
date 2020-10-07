@@ -57,7 +57,7 @@ module.exports = env => {
     plugins: [
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: isProduction ? "css/[hash].css" : "css/index.css"
+        filename: isProduction ? "[hash].css" : "index.css"
       }),
       new CopyWebpackPlugin({
         patterns: [
@@ -131,7 +131,7 @@ module.exports = env => {
             {
               loader: "sass-loader",
               options: {
-                sourceMap: !isProduction
+                sourceMap: true // always true for work resolve-url-loader!!!
               }
             }
           ]

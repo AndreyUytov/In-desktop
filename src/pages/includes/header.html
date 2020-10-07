@@ -1,7 +1,7 @@
 <header class="header">
 
   <div class="header__logo">
-    <a class="Header__logo-link">
+    <a <%= activePage === 'index' ? '' : 'href=index.html' %> class="Header__logo-link">
       <svg class="logo">
         <use xlink:href="#white-logo"/>
       </svg>
@@ -29,7 +29,16 @@
     <form class="header__search-form">
       <label class="header__label">
         <input class="header__input" type="text" placeholder="Search" />
+        <svg class="header__label-svg">
+          <use xlink:href="#search" />
+        </svg>
       </label>
+      <button class="header__search-snap btn" type="button">
+        <svg class="header__search-snap-svg" viewBox="0 0 24 24">
+          <use xlink:href="#search" />
+        </svg>
+        <span class="visually-hidden">Выполнить поиск</span>
+      </button>
     </form>
   </section>
 
@@ -55,7 +64,7 @@
   </section>
 
   <section class="header__other-section">
-    <button class="other-section__link">
+    <button class="other-section__link btn">
       <svg class="other-section__link-svg">
         <use xlink:href="#more" />
       </svg>
