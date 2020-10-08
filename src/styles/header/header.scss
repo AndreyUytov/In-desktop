@@ -1,9 +1,16 @@
 .header {
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+
   display: grid;
   grid-template-columns: auto 450px 367px 330px auto;
   grid-template-rows: 80px;
   justify-items: center;
   align-items: center;
+
+  background-color: #ffffff;
 }
 
 .header__logo {

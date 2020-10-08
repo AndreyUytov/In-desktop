@@ -1,0 +1,6 @@
+.profile {
+  min-width: 100%;
+  min-height: 400px;
+  background-image: url('./../../images/profile-fon.webp'); // for FireFox need webp
+  background-image: image-set(url('./../../images/profile-fon.webp') 1x, url('./../../images/profile-fon2x.png') 2x ); //for safary and another need 2x png or webp for another
+}
