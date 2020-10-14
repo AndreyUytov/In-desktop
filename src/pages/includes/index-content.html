@@ -2,7 +2,7 @@
 
   <div class="content-block">
     
-    <section class="profile">
+    <section class="profile section">
       <div class="profile__tools">
 
         <button class="profile__exit-btn btn" type="button">
@@ -27,6 +27,138 @@
         </button>
 
       </div>
+
+      <div class="profile__description">
+
+        <div class="profile__avatar">
+          <picture>
+            <source srcset="./../../images/avatar.webp" type="image/webp">
+            <source srcset="./../../images/avatar.png 2x">
+            <img src="./../../images/avatar.png" alt="avatar">
+          </picture>
+        </div>
+
+        <div class="profile__info">
+
+          <div class="profile__info-header">
+
+            <h2 class="profile__info-title section__title">
+              Dmitry Kargaev
+              <svg class="profile__info-logo">
+                <use xlink:href="#white-logo" />
+              </svg>
+            </h2>
+
+            <div class="profile__info-location">
+              <svg class="profile__info-vector">
+                <use xlink:href="#vector" />
+              </svg>
+              <p class="profile__info-text-location">
+                Saint Petersburg, Russian Federation
+              </p>
+            </div>
+
+          </div>
+
+          <p class="profile__info-description">
+            Freelance UX/UI designer, 80+ projects in web design, mobile apps (iOS & android) and creative projects. Open to offers.
+          </p>
+
+          <div class="profile__info-buttons">
+
+            <button class="profile__info-contact-button button button--active" type="button">
+              Contact info
+            </button>
+
+            <button class="button" type="button">
+              1,043 connections
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="tabs">
+
+      <ul class="tabs__list list">
+        <li class="tabs__elem">
+          <button class="tabs__item tabs__item--active" type="button">
+            Profile
+          </button>
+        </li>
+
+        <li class="tabs__elem">
+          <button class="tabs__item" type="button">
+            Activity & interests
+          </button>
+        </li>
+
+        <li class="tabs__elem">
+          <button class="tabs__item" type="button">
+            Articles <span class="tabs__event">(3)</span>
+          </button>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="about section">
+      <h2 class="section__title">About</h2>
+      <p class="about__description">
+        I'm more experienced in eCommerce web projects and mobile banking apps, but also like to work with creative projects, such as landing pages or unusual corporate websites.
+      </p>
+      <a href="#" class="link">see more</a>
+    </section>
+
+    <section class="projects section">
+      <h2 class="section__title">
+        Projects <span class="projects__number">3 of 12</span>
+      </h2>
+      <ul class="projects__list list">
+        <li class="projects__elem">
+          <picture class="projects__img">
+            <source srcset="./../../images/zara.webp" type="image/webp">
+            <img src="./../../images/zara.png" />
+          </picture>
+          <h3 class="projects__name">Zara redesign concept</h3>
+          <p class="projects__description">
+            UX/UI design, 15.07.2019
+          </p>
+        </li>
+
+        <li class="projects__elem">
+          <picture class="projects__img">
+            <source srcset="./../../images/place.webp" type="image/webp">
+            <img src="./../../images/place.png" />
+          </picture>
+          <h3 class="projects__name">SCTHON event brand identity</h3>
+          <p class="projects__description">
+            Graphic design, 03.31.2019
+          </p>
+        </li>
+
+        <li class="projects__elem">
+          <picture class="projects__img">
+            <source srcset="./../../images/drozd.webp" type="image/webp">
+            <img src="./../../images/drozd.png" />
+          </picture>
+          <h3 class="projects__name">Drozd. Brand identity. 2016</h3>
+          <p class="projects__description">
+            Graphic design, 03.04.2016
+          </p>
+        </li>
+      </ul>
+      <a href="#" class="link">Show all <span class="projects__link-amount">(12)</span></a>
+    </section>
+
+    <section class="skills section">
+      <h2 class="section__title">
+        Skills & Endoresments
+      </h2>
     </section>
 
   </div>

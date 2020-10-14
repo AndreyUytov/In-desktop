@@ -1,0 +1,44 @@
+.projects__number {
+  margin-left: 15px;
+  font-weight: normal;
+  color: #747474;
+}
+
+.projects__list {
+  width: 100%;
+  margin-bottom: 25px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projects__elem {
+  width: 250px;
+  height: 216px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.projects__img {
+  margin-bottom: 15px;
+}
+
+.projects__name {
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: left;
+}
+
+.projects__description {
+  padding: 0;
+  margin: 0;
+
+  font-size: 10px;
+  line-height: 150%;
+}
