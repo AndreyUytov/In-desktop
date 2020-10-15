@@ -3,8 +3,14 @@
 @import './fonts';
 @import './mixin';
 @import './scafolding';
-@import './tabs.scss';
+
+// snipets
+@import './snipets/tabs.scss';
+@import './snipets/aside-list.scss';
 
 
 @import './header/header.scss';
+@import './footer/footer.scss';
+
+
 @import './profile/index.scss';

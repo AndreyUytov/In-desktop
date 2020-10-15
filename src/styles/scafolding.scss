@@ -55,46 +55,6 @@ input[type="radio"].visually-hidden {
 	list-style: none;
 }
 
-// aside-list style
-
-.aside-list__elem {
-	&:not(:last-child) {
-    margin-bottom: 15px;
-  }
-}
-
-.aside-list__link {
-	display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.aside-list__info {
-	display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.aside-list__title {
-	margin: 0;
-  margin-bottom: 5px;
-  padding: 0;
-
-  font-size: 14px;
-  line-height: 13px;
-  font-weight: 900;
-}
-
-.aside-list__description {
-	padding: 0;
-  margin: 0;
-
-  font-size: 10px;
-  line-height: 150%;
-  font-weight: 100;
-}
-
 // 
 .content {
 	width: 1180px;
