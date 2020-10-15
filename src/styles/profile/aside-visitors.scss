@@ -1,0 +1,15 @@
+.visitors__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.visitors__elem-avatar {
+  min-width: 52px;
+  height: 52px;
+  margin-right: 15px;
+
+  display: flex;
+
+  border-radius: 27px;
+}

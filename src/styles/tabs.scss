@@ -38,6 +38,10 @@
 
   cursor: pointer;
   outline: none;
+
+  &:hover:not(.tabs__item--active) {
+    color: var(--akcentFonColor);
+  }
   
   &--active {
     height: 50px;

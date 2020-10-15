@@ -1,0 +1,36 @@
+.dashboard__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard__link {
+  text-decoration: underline;
+}
+
+.dashboard__stats {
+  padding: 0;
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+
+  font-size: 52px;
+  line-height: 50px;
+  color: var(--akcentFonColor);
+
+  text-transform: uppercase;
+}
+
+.dachboards__stats-title {
+  font-size: 14px;
+  line-height: 150%;  
+  color: #181818;
+
+  text-transform: none;
+}

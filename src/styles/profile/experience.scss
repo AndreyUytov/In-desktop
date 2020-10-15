@@ -1,0 +1,74 @@
+.experience__elem {
+  padding-bottom: 25px;
+  display: flex;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #F4F4F4;
+  }
+}
+
+.experience__work-logo {
+  min-width: 54px;
+  height: 54px;
+  margin-right: 15px;
+
+  display: flex;
+
+  border-radius: 27px;
+  overflow: hidden;
+}
+
+.experience__info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.experience__elem-title {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 900;
+}
+
+.experience__company-name {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 5px;
+
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 600;
+}
+
+.experience__company-place {
+  margin-left: 10px;
+
+  font-weight: 100;
+}
+
+.experience__work-dates {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
+  font-size: 10px;
+  line-height: 150%;
+  font-weight: 100;
+}
+
+.experience__work-dates-counter {
+  margin-left: 10px;
+
+  font-weight: 600;
+  color: var(--akcentFonColor);
+}
+
+.experience__work-description {
+  font-size: 10px;
+  line-height: 150%;
+}

@@ -20,6 +20,10 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  &:hover .projects__name {
+    color: var(--akcentFonColor);
+  }
 }
 
 .projects__img {
