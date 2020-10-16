@@ -1,0 +1,16 @@
+.new-post {
+  padding: 25px 30px;
+
+}
+
+.new-post__textarea {
+  width: 100%;
+  padding-right: 180px;
+
+  border: none;
+  resize: none;
+
+  &:focus {
+    outline: 1px solid var(--akcentFonColor);
+  }
+}

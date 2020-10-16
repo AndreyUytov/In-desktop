@@ -47,8 +47,6 @@ module.exports = env => {
     devtool: isProduction ? "" : "source-map",
 
     devServer: {
-      contentBase: path.join(__dirname, "dist"),
-      watchContentBase: true,
       publicPath: '/',
       openPage: 'index.html',
       // hot: !isProduction

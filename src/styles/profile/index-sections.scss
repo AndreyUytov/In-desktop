@@ -1,0 +1,31 @@
+.index-section {
+	padding: 30px 30px 35px 30px;
+	margin-bottom: 20px;
+
+	background: #FFFFFF;
+	box-shadow: 0px 20px 60px rgba(241, 244, 248, 0.5);
+	border-radius: 4px;
+}
+
+.index-section__title {
+	margin: 0;
+	margin-bottom: 25px;
+  padding: 0;
+
+	font-size: 18px;
+	font-weight: 900;
+}
+
+.index-section__aside-title {
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	padding-bottom: 20px;
+
+	font-size: 12px;
+	line-height: 11px;
+	text-transform: uppercase;
+	font-weight: 900;
+
+	border-bottom: 1px solid #F4F4F4;
+}
