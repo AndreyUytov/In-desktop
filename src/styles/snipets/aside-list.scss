@@ -2,6 +2,11 @@
 	&:not(:last-child) {
     margin-bottom: 15px;
   }
+
+  &:hover .aside-list__title {
+    text-decoration: underline;
+    color: var(--akcentFonColor);
+  }
 }
 
 .aside-list__link {

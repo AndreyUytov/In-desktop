@@ -1,7 +1,96 @@
 <footer class="footer">
 
-  <div class="content">
-    footer
+  <div class="footer__inner-wrapper content">
+
+    <div class="footer__logo">
+      <svg class="footer__logo-svg">
+        <use xlink:href="#white-logo" />
+      </svg>
+      <p class="footer__logo-name">
+        Linked<span class="footer__logo-marker">In</span>
+      </p>
+    </div>
+
+    <nav class="footer__navigation">
+      <h3 class="footer__block-title">Navigation</h3>
+      <ul class="footer__nav-list list">
+        <li class="footer__nav-elem">
+          <a href="about.html" class="footer__nav-link">About</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Talent Solution</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Community Guidelines</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Careers</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Marketing Solutions</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Privacy & Terms</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Advertising</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Sales Solutions</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Mobil App</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Small Business</a>
+        </li>
+        <li class="footer__nav-elem">
+          <a href="#" class="footer__nav-link">Safery Center</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="footer__fast-access">
+      <h3 class="footer__block-title">
+        Fast access
+      </h3>
+      <button class="footer__fast-access-button button button--active" type="button">
+        QUESTIONS?
+        <svg class="footer__fast-access-svg">
+          <use xlink:href="#help-circle" />
+        </svg>
+      </button>
+      <button class="footer__fast-access-button button" type="button">
+        SETTINGS
+        <svg class="footer__fast-access-svg">
+          <use xlink:href="#settings" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="footer__lang">
+      <h3 class="footer__block-title">
+        Language
+      </h3>
+      <form class="footer__select-form select-form">
+        <div class="__select" data-state="">
+          <div class="__select__title" data-default="select">ENGLISH</div>
+          <div class="__select__content">
+            
+            <input id="en-select" class="__select__input" value="default" type="radio" name="singleSelect"/>
+            <label for="en-select" class="__select__label" >Select Language</label>
+
+            <input id="en-select" class="__select__input" value="rating" type="radio" checked/>
+            <label for="en-select" class="__select__label">ENGLISH</label>
+
+            <input id="ru-select" class="__select__input" value="price" type="radio"/>
+            <label for="ru-select" class="__select__label">RUSSIAN</label>
+
+          </div>
+        </div>
+      </form>
+    </div>
+
   </div>
 
 </footer>

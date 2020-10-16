@@ -1,6 +1,101 @@
 .footer {
   margin-top: 40px;
+  padding-bottom: 50px;
   
   border-top: 1px solid #E7E7E7;
   background: linear-gradient(180deg, rgba(241, 244, 248, 0.8) 0%, rgba(241, 244, 248, 0) 100%);
+}
+
+.footer__inner-wrapper {
+  margin-top: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer__logo-svg {
+  width: 46px;
+  height: 46px;
+  margin-bottom: 12px;
+}
+
+.footer__logo-name {
+  padding: 0;
+  margin: 0;
+
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.footer__logo-marker {
+  color: var(--akcentFonColor);
+}
+
+.footer__navigation {
+  width: 485px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.footer__block-title {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+
+  font-size: 12px;
+  line-height: 11px;
+}
+
+.footer__nav-list {
+  margin-right: -35px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer__nav-elem {
+  width: 135px;
+  margin-right: 35px;
+}
+
+.footer__nav-link {
+  font-size: 12px;
+  line-height: 11px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.footer__fast-access-button {
+  width: 170px;
+  height: 32px;
+  margin-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  justify-content: space-between;
+
+}
+
+.footer__fast-access-svg {
+  width: 16px;
+  height: 16px;
+}
+
+.footer__select-form {
+  width: 270px;
+  height: 32px;
 }
