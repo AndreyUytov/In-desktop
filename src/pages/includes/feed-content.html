@@ -7,28 +7,101 @@
       <form class="new-post__form">
         <textarea class="new-post__textarea" placeholder="What's on your mind?"></textarea>
         <div class="new-post__buttons">
-          <label class="new-post__file-snap snap">
+          <label class="new-post__file-snap">
             <input type="file" />
             <svg class="new-post__svg">
               <use xlink:href="#paperclip" />
             </svg>
           </label>
 
-          <label class="new-post__file-snap snap">
+          <label class="new-post__file-snap">
             <input type="file" />
             <svg class="new-post__svg">
-              <use xlink:href="#paperclip" />
+              <use xlink:href="#image" />
             </svg>
           </label>
           
-          <label class="new-post__file-snap snap">
+          <label class="new-post__file-snap">
             <input type="file" />
             <svg class="new-post__svg">
-              <use xlink:href="#paperclip" />
+              <use xlink:href="#film" />
             </svg>
+          </label>
+          <label class="new-post__submit-snap">
+            <input type="submit" />
+            <svg class="new-post__svg-submit">
+              <use xlink:href="#send" />
+            </svg>
+            <span class="visually-hidden">Send</span>
           </label>
         </div>
       </form>
+    </section>
+
+    <section class="sort-posts">
+      <form class="sort-posts__form">
+        <div class="sort-posts__wrapper">
+          <div class="sort-posts__form-name">Sort by:</div>
+          <div id="__select-posts-sort" class="__select __select--sort-posts" data-state="">
+          <div class="__select__title" data-default="select">trending</div>
+          <div class="__select__content">
+            
+            
+            <label for="default-select" class="__select__label" >Select filter</label>
+            <input id="default-select" class="__select__input" value="default" type="radio" name="singleSelect"/>
+
+            <label for="trend-select" class="__select__label">trending</label>
+            <input id="trend-select" class="__select__input" value="rating" type="radio" checked/>
+            
+            <label for="date-select" class="__select__label">date</label>
+            <input id="date-select" class="__select__input" value="price" type="radio"/>
+            
+          </div>
+        </div>
+        </div>
+      </form>
+    </section>
+
+    <section class="posts section-shadow">
+
+      <ul class="posts__list list">
+
+        <li class="posts__list-elem">
+
+          <div class="posts__elem-marker">
+            <p class="posts__marker-info">
+              <a href="#" class="link">Ted Bell</a>,
+              <a href="#" class="link">Annette Nguyen</a> and 
+              <a href="#" class="link">Cody Hawkins</a>
+              liked this
+            </p>
+            <button class="posts__marker-btn btn" type="button">
+              <svg class="posts__btn-svg">
+                <use xlink:href="#more" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="posts__elem-creator">
+            <a href="#" class="aside-list__link">
+              <div class="visitors__elem-avatar">
+                <img src="./../../images/photo8.png" />
+              </div>
+              <div class="aside-list__info">
+                <h3 class="aside-list__title">
+                  Theresa Steward
+                </h3>
+                <p class="aside-list__description">
+                  iOS developer
+                </p>
+              </div>
+            </a>
+          </div>
+
+        </li>
+
+      </ul>
+
     </section>
 
   </div>

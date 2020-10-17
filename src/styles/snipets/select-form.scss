@@ -4,6 +4,21 @@
   height: 40px;
   margin: 0 auto;
 
+  &.__select--sort-posts {
+    width: 95px;
+    height: 30px;
+    margin: 0px;
+
+
+    .__select__title {
+      padding-left: 3px;
+
+      background: transparent;
+      border:none;
+      color: var(--akcentFonColor);
+    }
+  }
+
   &[data-state="active"] {
     .__select__title {
       background: #FFFFFF;
@@ -64,11 +79,15 @@
   }
 
   &:hover {  
-    border-bottom: solid 2px var(--akcentFonColor);
+    border-bottom: solid 1px var(--akcentFonColor);
     &::before {
       background-image: url(./../../images/svg/select-form-icon.svg);
     }
   }
+}
+
+.__select--sort-posts .__select__content {
+  top: 30px;
 }
 
 .__select__content {
@@ -98,6 +117,11 @@
     pointer-events: none;
   }
 }
+
+.__select--sort-posts .__select__label {
+  padding-left: 3px;
+}
+
 .__select__label {
   display: flex;
   align-items: center;

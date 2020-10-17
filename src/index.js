@@ -9,25 +9,32 @@ hello().then(console.log)
 
 console.log('hi hey')
 
-// код для работы селекта на странице католога
+// код для работы селекта 
 
-const selectSingle = document.querySelector('.__select');
-const selectSingle_title = selectSingle.querySelector('.__select__title');
-const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+const selectListener = (__select) => {
+  const selectSingle_title = __select.querySelector('.__select__title');
+  const selectSingle_labels = __select.querySelectorAll('.__select__label');
 
-// Toggle menu
-selectSingle_title.addEventListener('click', () => {
-  if ('active' === selectSingle.getAttribute('data-state')) {
-    selectSingle.setAttribute('data-state', '');
-  } else {
-    selectSingle.setAttribute('data-state', 'active');
-  }
-});
-
-// Close when click to option
-for (let i = 0; i < selectSingle_labels.length; i++) {
-  selectSingle_labels[i].addEventListener('click', (evt) => {
-    selectSingle_title.textContent = evt.target.textContent;
-    selectSingle.setAttribute('data-state', '');
+  // Toggle menu
+  selectSingle_title.addEventListener('click', () => {
+    if ('active' === __select.getAttribute('data-state')) {
+      __select.setAttribute('data-state', '');
+    } else {
+      __select.setAttribute('data-state', 'active');
+    }
   });
+
+  // Close when click to option
+  for (let i = 0; i < selectSingle_labels.length; i++) {
+    selectSingle_labels[i].addEventListener('click', (evt) => {
+      selectSingle_title.textContent = evt.target.textContent;
+      __select.setAttribute('data-state', '');
+    });
+  }
 }
+
+const selectSingleFooter = document.querySelector('#__select-footer');
+const selectSinglePostsSort = document.querySelector('#__select-posts-sort');
+
+selectListener(selectSingleFooter)
+selectListener(selectSinglePostsSort)

@@ -1,0 +1,36 @@
+.sort-posts {
+  margin-bottom: 30px;
+}
+
+.sort-posts__form {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::before, &::after {
+    content: '';
+    position: relative;
+    top: 50%;
+    width: 50%;
+
+    height: 1px;
+
+    background-color: #E7E7E7;
+    z-index: -1;
+  }
+}
+
+.sort-posts__wrapper {
+  min-width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sort-posts__form-name {
+  font-size: 12px;
+  line-height: 11px;
+  text-transform: uppercase;
+}
