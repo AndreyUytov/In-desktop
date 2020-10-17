@@ -3,14 +3,45 @@
 
 }
 
+.new-post__form {
+  display: flex;
+}
+
 .new-post__textarea {
-  width: 100%;
-  padding-right: 180px;
+  width: 650px;
+  padding: 20px;
 
   border: none;
-  resize: none;
+  resize: vertical;
 
   &:focus {
     outline: 1px solid var(--akcentFonColor);
   }
+  &:hover {
+    outline: 1px solid var(--akcentFonColor);
+  }
+}
+
+.new-post__buttons {
+  align-self: flex-end;
+
+  display: flex;
+}
+
+.new-post__file-snap {
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & input {
+    display: none;
+  }
+}
+
+.new-post__svg {
+  width: 24px;
+  height: 24px;
 }
