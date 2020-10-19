@@ -37,4 +37,22 @@ const selectSingleFooter = document.querySelector('#__select-footer');
 const selectSinglePostsSort = document.querySelector('#__select-posts-sort');
 
 selectListener(selectSingleFooter)
-selectListener(selectSinglePostsSort)
+if (selectSinglePostsSort) {
+  selectListener(selectSinglePostsSort)
+}
+
+const input = document.querySelector('.header__input')
+
+let timerId
+input.addEventListener('input', (evt) => {
+  if(timerId) {
+    clearTimeout(timerId)
+    timerId = setTimeout(() => {
+      console.log(evt.target.value)
+    }, 1000)
+  } else {
+   timerId = setTimeout(() => {
+    console.log(evt.target.value)
+   }, 1000)   
+  }
+})

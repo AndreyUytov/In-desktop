@@ -1,0 +1,71 @@
+.my-groups {
+  padding: 25px 30px;
+  margin-bottom: 20px;
+
+  background: #FCFDFD;
+  border-radius: 4px;
+}
+
+.my-groups__title {
+  padding: 0;
+  padding-bottom: 20px;
+  margin: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 12px;
+  line-height: 11px;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #F4F4F4;
+}
+
+.my-group__list {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.my-group__elem {
+  padding: 15px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  background: #FFFFFF;
+  border: 1px solid #F4F4F4;
+  box-sizing: border-box;
+  border-radius: 6px;
+}
+
+.my-group__elem-link {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover .my-group__name {
+    text-decoration: underline;
+  }
+}
+
+.my-group__avatar {
+  min-width: 52px;
+  width: 52px;
+  height: 52px;
+
+  margin-right: 15px;
+
+  display: flex;
+
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.my-group__name {
+  padding: 0;
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 125%;
+}

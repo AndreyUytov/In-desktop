@@ -216,4 +216,9 @@
     background: #ffffff;
     border: 1px solid var(--akcentFonColor);
   }
+
+  & svg use {
+    min-width: 24px;
+    min-height: 24px;
+  }
 }
