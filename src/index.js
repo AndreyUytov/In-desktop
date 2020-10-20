@@ -41,6 +41,8 @@ if (selectSinglePostsSort) {
   selectListener(selectSinglePostsSort)
 }
 
+// for fun)
+
 const input = document.querySelector('.header__input')
 
 let timerId
